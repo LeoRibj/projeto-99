@@ -1,0 +1,108 @@
+[gd_scene load_steps=16 format=3 uid="uid://bt7wr5veu33hm"]
+
+[ext_resource type="Texture2D" uid="uid://cxv240nij2d5k" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/10_Sky.png" id="1_r8oyt"]
+[ext_resource type="Texture2D" uid="uid://c05mulw2j2l64" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/09_Forest.png" id="2_lhepe"]
+[ext_resource type="Texture2D" uid="uid://bmwwp7vxqvjfr" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/07_Forest.png" id="3_813cr"]
+[ext_resource type="Texture2D" uid="uid://c78t82ayuec41" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/06_Forest.png" id="4_nx358"]
+[ext_resource type="Shader" path="res://particulas.gdshader" id="5_a8i40"]
+[ext_resource type="Texture2D" uid="uid://d13w4wl8x6cmc" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/05_Particles.png" id="5_gyjk1"]
+[ext_resource type="Texture2D" uid="uid://6fnnt0ovwcng" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/04_Forest.png" id="6_6g05i"]
+[ext_resource type="Texture2D" uid="uid://cp4ei43gby6no" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/03_Particles.png" id="7_hvbfo"]
+[ext_resource type="Texture2D" uid="uid://cnvq85l8wjvwl" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/02_Bushes.png" id="8_11qwh"]
+[ext_resource type="Shader" path="res://part.gdshader" id="8_ansg7"]
+[ext_resource type="Shader" path="res://fumaça.gdshader" id="9_oo0hw"]
+[ext_resource type="Texture2D" uid="uid://o2ujwlx808l2" path="res://assets/Parallax Forest Background (Seamless)/Parallax Forest Background - Blue/01_Mist.png" id="9_ywn8d"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5bn48"]
+shader = ExtResource("5_a8i40")
+shader_parameter/speed = 0.2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k5ml2"]
+shader = ExtResource("8_ansg7")
+shader_parameter/speed = 0.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bmvcx"]
+shader = ExtResource("9_oo0hw")
+shader_parameter/speed = 0.2
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+process_priority = 1
+follow_viewport_enabled = true
+follow_viewport_scale = 4.0
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+texture_repeat = 2
+texture = ExtResource("1_r8oyt")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+texture_repeat = 2
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+texture_repeat = 2
+texture = ExtResource("2_lhepe")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+texture_repeat = 2
+texture = ExtResource("3_813cr")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5"]
+texture_repeat = 2
+texture = ExtResource("4_nx358")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer6"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_5bn48")
+texture = ExtResource("5_gyjk1")
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer7"]
+texture_repeat = 2
+texture = ExtResource("6_6g05i")
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer8"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_k5ml2")
+texture = ExtResource("7_hvbfo")
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer9"]
+texture_repeat = 2
+texture = ExtResource("8_11qwh")
+
+[node name="ParallaxLayer10" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer10"]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_bmvcx")
+texture = ExtResource("9_ywn8d")

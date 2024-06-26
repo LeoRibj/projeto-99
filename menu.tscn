@@ -1,0 +1,357 @@
+[gd_scene load_steps=10 format=3 uid="uid://dtw8cl0ye6aic"]
+
+[ext_resource type="Texture2D" uid="uid://cla5qixywmrmr" path="res://assets/Buttons/1.png" id="1_gh5ju"]
+[ext_resource type="Script" path="res://menu.gd" id="1_hleln"]
+[ext_resource type="Texture2D" uid="uid://c8r7d8nassp2s" path="res://assets/Buttons/3.png" id="2_3wm4e"]
+[ext_resource type="Texture2D" uid="uid://bfpterun3ktxy" path="res://assets/Buttons/2.png" id="3_g06ac"]
+[ext_resource type="Texture2D" uid="uid://b17x5w5u540qu" path="res://assets/UI/IconsFlat-64.png" id="3_y3hew"]
+[ext_resource type="Texture2D" uid="uid://c25nblwcjqjsa" path="res://assets/Buttons/5.png" id="4_i0flo"]
+[ext_resource type="Texture2D" uid="uid://bi522q5yvi68j" path="res://assets/Buttons/4.png" id="5_ktnoq"]
+[ext_resource type="FontFile" uid="uid://c6hrglfhhssw7" path="res://assets/fonts/Kurland.otf" id="8_nna0u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xcyah"]
+font_size = 8
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_hleln")
+metadata/_edit_horizontal_guides_ = []
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.545098, 1, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.34
+anchor_right = 0.5
+anchor_bottom = 0.34
+offset_left = -190.0
+offset_right = 4.0
+offset_bottom = 25.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+
+[node name="t1" type="TextureButton" parent="HBoxContainer" groups=["b1"]]
+layout_mode = 2
+texture_normal = ExtResource("1_gh5ju")
+texture_pressed = ExtResource("2_3wm4e")
+texture_hover = ExtResource("3_g06ac")
+texture_disabled = ExtResource("4_i0flo")
+texture_focused = ExtResource("5_ktnoq")
+
+[node name="Label" type="Label" parent="HBoxContainer/t1"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 6.0
+offset_right = 52.0
+offset_bottom = 29.0
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+
+[node name="t2" type="TextureButton" parent="HBoxContainer" groups=["b1"]]
+layout_mode = 2
+texture_normal = ExtResource("1_gh5ju")
+texture_pressed = ExtResource("2_3wm4e")
+texture_hover = ExtResource("3_g06ac")
+texture_disabled = ExtResource("4_i0flo")
+texture_focused = ExtResource("5_ktnoq")
+
+[node name="Label" type="Label" parent="HBoxContainer/t2"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 6.0
+offset_right = 52.0
+offset_bottom = 29.0
+theme_override_font_sizes/font_size = 9
+horizontal_alignment = 1
+
+[node name="t3" type="TextureButton" parent="HBoxContainer" groups=["b1"]]
+layout_mode = 2
+texture_normal = ExtResource("1_gh5ju")
+texture_pressed = ExtResource("2_3wm4e")
+texture_hover = ExtResource("3_g06ac")
+texture_disabled = ExtResource("4_i0flo")
+texture_focused = ExtResource("5_ktnoq")
+
+[node name="Label" type="Label" parent="HBoxContainer/t3"]
+layout_mode = 0
+offset_left = 11.5
+offset_top = 6.5
+offset_right = 52.5
+offset_bottom = 29.5
+theme_override_font_sizes/font_size = 9
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="HBoxContainer"]
+modulate = Color(0.466667, 0.466667, 0, 1)
+position = Vector2(92.6667, -66.6667)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("3_y3hew")
+hframes = 10
+vframes = 10
+frame = 33
+
+[node name="Line2D" type="Line2D" parent="HBoxContainer"]
+modulate = Color(0.466667, 0.466667, 0, 1)
+position = Vector2(92.6667, -66.6667)
+scale = Vector2(0.666667, 0.666667)
+points = PackedVector2Array(-1.00006, 37.75, -96.25, 37.75, -96.25, 91)
+
+[node name="Line2D2" type="Line2D" parent="HBoxContainer"]
+modulate = Color(0.466667, 0.466667, 0, 1)
+position = Vector2(92.6667, -66.6667)
+scale = Vector2(0.666667, 0.666667)
+points = PackedVector2Array(-1.75006, 37.75, 99.4999, 37.75, 99.4999, 91)
+
+[node name="Line2D3" type="Line2D" parent="HBoxContainer"]
+modulate = Color(0.466667, 0.466667, 0, 1)
+position = Vector2(92.6667, -66.6667)
+scale = Vector2(0.666667, 0.666667)
+points = PackedVector2Array(3.49994, 32.5, 3.49994, 91)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.58
+anchor_right = 0.5
+anchor_bottom = 0.58
+offset_left = -193.0
+offset_top = -3.05176e-05
+offset_right = 1.0
+offset_bottom = 25.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+
+[node name="puzzle" type="TextureButton" parent="HBoxContainer2" groups=["b2"]]
+layout_mode = 2
+texture_normal = ExtResource("1_gh5ju")
+texture_pressed = ExtResource("2_3wm4e")
+texture_hover = ExtResource("3_g06ac")
+texture_disabled = ExtResource("4_i0flo")
+texture_focused = ExtResource("5_ktnoq")
+
+[node name="Label" type="Label" parent="HBoxContainer2/puzzle"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 6.0
+offset_right = 62.0
+offset_bottom = 32.0
+theme_override_font_sizes/font_size = 11
+text = "Puzzle"
+
+[node name="match" type="TextureButton" parent="HBoxContainer2" groups=["b2"]]
+layout_mode = 2
+texture_normal = ExtResource("1_gh5ju")
+texture_pressed = ExtResource("2_3wm4e")
+texture_hover = ExtResource("3_g06ac")
+texture_disabled = ExtResource("4_i0flo")
+texture_focused = ExtResource("5_ktnoq")
+
+[node name="Label" type="Label" parent="HBoxContainer2/match"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 5.0
+offset_right = 54.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 11
+text = "Match"
+
+[node name="questionario" type="TextureButton" parent="HBoxContainer2" groups=["b2"]]
+layout_mode = 2
+texture_normal = ExtResource("1_gh5ju")
+texture_pressed = ExtResource("2_3wm4e")
+texture_hover = ExtResource("3_g06ac")
+texture_disabled = ExtResource("4_i0flo")
+texture_focused = ExtResource("5_ktnoq")
+
+[node name="Label" type="Label" parent="HBoxContainer2/questionario"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 6.0
+offset_right = 56.0
+offset_bottom = 29.0
+theme_override_font_sizes/font_size = 9
+text = "Question"
+
+[node name="puz" type="Line2D" parent="HBoxContainer2"]
+modulate = Color(0.466667, 0.466667, 0, 1)
+position = Vector2(119.211, -72)
+scale = Vector2(0.617486, 0.666667)
+points = PackedVector2Array(-38.3987, 48, -150.952, 48)
+
+[node name="puz1" type="Line2D" parent="HBoxContainer2"]
+modulate = Color(0.466667, 0.466667, 0, 1)
+position = Vector2(123.5, -71.767)
+scale = Vector2(0.666667, 0.664641)
+points = PackedVector2Array(-141.75, 42.75, -141.75, 105)
+
+[node name="mat2" type="Line2D" parent="HBoxContainer2"]
+modulate = Color(0.466667, 0.466667, 0, 1)
+position = Vector2(126.834, -72)
+scale = Vector2(0.666667, 0.666667)
+points = PackedVector2Array(-47.0004, 48, 60, 48)
+
+[node name="mat" type="Line2D" parent="HBoxContainer2"]
+modulate = Color(0.466667, 0.466667, 0, 1)
+position = Vector2(258.167, -72)
+scale = Vector2(0.666667, 0.666667)
+points = PackedVector2Array(-142, 43, -142, 105)
+
+[node name="2d" type="Line2D" parent="HBoxContainer2"]
+modulate = Color(0.466667, 0.466667, 0, 1)
+position = Vector2(190.167, -72)
+scale = Vector2(0.666667, 0.666667)
+points = PackedVector2Array(-142, 43, -142, 65.733, -142, 105)
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.842
+anchor_right = 0.5
+anchor_bottom = 0.842
+offset_left = -139.0
+offset_top = -0.200043
+offset_right = -4.0
+offset_bottom = 24.8
+grow_horizontal = 2
+scale = Vector2(2, 2)
+theme_override_constants/separation = 11
+
+[node name="facil" type="TextureButton" parent="HBoxContainer3" groups=["b3"]]
+layout_mode = 2
+texture_normal = ExtResource("1_gh5ju")
+texture_pressed = ExtResource("2_3wm4e")
+texture_hover = ExtResource("3_g06ac")
+texture_disabled = ExtResource("4_i0flo")
+texture_focused = ExtResource("5_ktnoq")
+
+[node name="Label" type="Label" parent="HBoxContainer3/facil"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 6.5
+offset_right = 51.0
+offset_bottom = 31.5
+text = "Plataforma"
+label_settings = SubResource("LabelSettings_xcyah")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="medio" type="TextureButton" parent="HBoxContainer3" groups=["b3"]]
+layout_mode = 2
+texture_normal = ExtResource("1_gh5ju")
+texture_pressed = ExtResource("2_3wm4e")
+texture_hover = ExtResource("3_g06ac")
+texture_disabled = ExtResource("4_i0flo")
+texture_focused = ExtResource("5_ktnoq")
+
+[node name="Label" type="Label" parent="HBoxContainer3/medio"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -19.0
+offset_top = -7.5
+offset_right = 21.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 11
+text = "solo"
+horizontal_alignment = 1
+
+[node name="Line2D" type="Line2D" parent="HBoxContainer3/medio"]
+modulate = Color(0.466667, 0.466667, 0, 1)
+position = Vector2(29.5, -69)
+scale = Vector2(0.666667, 0.666667)
+points = PackedVector2Array(-42.75, 37.5, -103.5, 37.5, -103.5, 90.7499)
+
+[node name="Line2D3" type="Line2D" parent="HBoxContainer3/medio"]
+modulate = Color(0.466667, 0.466667, 0, 1)
+position = Vector2(35, -69)
+scale = Vector2(0.666667, 0.666667)
+points = PackedVector2Array(-51.75, 37.5, -3, 37.5, -3, 90.7499)
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 43.0
+offset_top = -71.0
+offset_right = 140.0
+offset_bottom = -20.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.564706, 0.564706, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.564706, 0.564706, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.564706, 0.564706, 0, 1)
+theme_override_fonts/font = ExtResource("8_nna0u")
+theme_override_font_sizes/font_size = 40
+text = "Quit"
+flat = true
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -72.0
+offset_right = -29.0
+offset_bottom = -21.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.564706, 0.564706, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.564706, 0.564706, 0, 1)
+theme_override_fonts/font = ExtResource("8_nna0u")
+theme_override_font_sizes/font_size = 40
+text = "Continue"
+flat = true
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -83.0
+offset_top = -69.0
+offset_right = 80.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.564706, 0.564706, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0.564706, 0.564706, 0, 1)
+theme_override_fonts/font = ExtResource("8_nna0u")
+theme_override_font_sizes/font_size = 40
+text = "Input"
+flat = true
+
+[connection signal="focus_entered" from="HBoxContainer/t1" to="." method="_on_texture_button_focus_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

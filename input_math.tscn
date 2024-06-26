@@ -1,0 +1,113 @@
+[gd_scene load_steps=2 format=3 uid="uid://di86cvrlxgnhy"]
+
+[ext_resource type="Script" path="res://input_math.gd" id="1_i6yrl"]
+
+[node name="Input math" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i6yrl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.545098, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.066
+anchor_top = 0.15
+anchor_right = 0.952
+anchor_bottom = 0.635
+offset_left = 0.200001
+offset_right = 0.399963
+offset_bottom = -3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LineEdit3" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Insira a pergunta"
+alignment = 1
+
+[node name="LineEdit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "selecione a imagem"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="imagens" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "selecione a img"
+
+[node name="imagens2" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "selecione a img"
+
+[node name="imagens3" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "selecione a img"
+
+[node name="imagens4" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "selecione a img"
+
+[node name="LineEdit2" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "insira qual a imagen correta"
+alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.814
+anchor_top = 0.925
+anchor_right = 0.971
+anchor_bottom = 0.992
+offset_left = -0.200012
+offset_top = -6.10352e-05
+offset_right = 0.199951
+offset_bottom = -0.200012
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+text = "Continue
+"
+flat = true
+
+[node name="FileDialog" type="FileDialog" parent="."]
+initial_position = 1
+title = "Open a File"
+size = Vector2i(467, 300)
+min_size = Vector2i(201, 70)
+ok_button_text = "Abrir"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.png", "*.jpeg", "*.jpg")
+
+[connection signal="text_submitted" from="VBoxContainer/LineEdit3" to="." method="_on_line_edit_3_text_submitted"]
+[connection signal="pressed" from="VBoxContainer/LineEdit" to="." method="_on_line_edit_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/imagens" to="." method="_on_imagens_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/imagens2" to="." method="_on_imagens_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/imagens3" to="." method="_on_imagens_3_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/imagens4" to="." method="_on_imagens_4_pressed"]
+[connection signal="text_submitted" from="VBoxContainer/LineEdit2" to="." method="_on_line_edit_2_text_submitted"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="file_selected" from="FileDialog" to="." method="_on_file_dialog_file_selected"]

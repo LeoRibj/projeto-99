@@ -1,0 +1,70 @@
+[gd_scene load_steps=5 format=3 uid="uid://dr1yv5q3y1vx3"]
+
+[ext_resource type="Script" path="res://dialog.gd" id="1_5878w"]
+[ext_resource type="Texture2D" uid="uid://bsofb2aexc8m6" path="res://assets/Elementals_ground_monk_FREE_v1.3/ground_monk.png" id="1_dgsj3"]
+[ext_resource type="FontFile" uid="uid://c6hrglfhhssw7" path="res://assets/fonts/Kurland.otf" id="2_goy51"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dasin"]
+font = ExtResource("2_goy51")
+font_size = 40
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_5878w")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 112.0
+offset_top = -136.0
+offset_right = -610.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 0.243137)
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
+position = Vector2(40, 48)
+texture = ExtResource("1_dgsj3")
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 188.0
+offset_top = -136.0
+offset_right = -98.0
+offset_bottom = -55.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
+
+[node name="dialogo" type="Label" parent="ColorRect3"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 17.0
+offset_right = 368.0
+offset_bottom = 63.0
+label_settings = SubResource("LabelSettings_dasin")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="ColorRect3"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -96.0
+offset_top = 26.0
+offset_right = -10.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+text = "Continuar"
+flat = true
+
+[connection signal="pressed" from="ColorRect3/Button" to="." method="_on_button_pressed"]

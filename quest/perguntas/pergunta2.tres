@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://b1vg55wedtjms"]
+
+[ext_resource type="Script" path="res://quest/perguntas/questions.gd" id="1_15wtn"]
+
+[resource]
+script = ExtResource("1_15wtn")
+question_info = "qual a cor da folha?"
+options = Array[String](["1", "2", "3", "verde"])
+correct = "verde"
+conunt = 0

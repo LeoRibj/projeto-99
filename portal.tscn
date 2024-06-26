@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://bel8gs04ky1bs"]
+
+[ext_resource type="Texture2D" uid="uid://cl3jstm3fsf66" path="res://assets/portal/portal3_spritesheet.png" id="1_4d8dk"]
+[ext_resource type="Script" path="res://portal.gd" id="1_8pnl0"]
+
+[sub_resource type="Animation" id="Animation_omual"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_ov141"]
+resource_name = "portal"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [4, 5, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2tjs7"]
+_data = {
+"RESET": SubResource("Animation_omual"),
+"portal": SubResource("Animation_ov141")
+}
+
+[node name="portal" type="CharacterBody2D"]
+scale = Vector2(3, 3)
+script = ExtResource("1_8pnl0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4d8dk")
+hframes = 7
+frame = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_2tjs7")
+}

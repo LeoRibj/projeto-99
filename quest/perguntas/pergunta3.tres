@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://v47i7osb4d0r"]
+
+[ext_resource type="Script" path="res://quest/perguntas/questions.gd" id="1_eguv3"]
+
+[resource]
+script = ExtResource("1_eguv3")
+question_info = "quanto é 2+2?"
+options = Array[String](["1", "3", "4", "2"])
+correct = "4"
+conunt = 0

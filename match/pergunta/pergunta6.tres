@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ImageNSQ" load_steps=2 format=3 uid="uid://cetophfdg1p43"]
+
+[ext_resource type="Script" path="res://match/pergunta/match.gd" id="1_uy0yd"]
+
+[resource]
+script = ExtResource("1_uy0yd")
+question = "relacione"
+num_img = Array[String](["1", "2", "3", "4"])
+imagens_SELECT = Array[ImageTexture]([null, null, null, null])
+numcorr = ""
+metadata/_editor_prop_ptr_imaggens = NodePath("")

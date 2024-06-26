@@ -1,0 +1,107 @@
+[gd_scene load_steps=19 format=3 uid="uid://bmvfpx8xshiwn"]
+
+[ext_resource type="PackedScene" uid="uid://gnlnv0irvqjr" path="res://puzzle/light.tscn" id="1_22j2d"]
+[ext_resource type="Script" path="res://puzzle/level1.gd" id="1_g40hv"]
+[ext_resource type="Texture2D" uid="uid://b4nwg5xj0vdhb" path="res://assets/Free Simple Pixel Tileset 16x16/Cave Tiles.png" id="1_njuj8"]
+[ext_resource type="Texture2D" uid="uid://ppiya4lgndpv" path="res://assets/Dots/Sem título.png" id="3_mj5pm"]
+[ext_resource type="PackedScene" uid="uid://knbx350scr7j" path="res://puzzle/nelvl.tscn" id="4_nxek2"]
+[ext_resource type="PackedScene" uid="uid://dtanwahvhjvic" path="res://pause.tscn" id="6_vp2ra"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ox0sk"]
+texture = ExtResource("1_njuj8")
+7:3/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vq6wt"]
+texture = ExtResource("3_mj5pm")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_asiaw"]
+sources/0 = SubResource("TileSetAtlasSource_ox0sk")
+sources/2 = SubResource("TileSetAtlasSource_vq6wt")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46mun"]
+size = Vector2(25, 134.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ux1c6"]
+size = Vector2(215, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2ihg"]
+size = Vector2(20, 142)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewc4h"]
+size = Vector2(222.75, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suhdu"]
+size = Vector2(127, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bt865"]
+size = Vector2(15, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5skcn"]
+size = Vector2(97, 13)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xyna4"]
+size = Vector2(20, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n2v60"]
+size = Vector2(10, 65)
+
+[node name="level" type="Node2D"]
+script = ExtResource("1_g40hv")
+
+[node name="map" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="map"]
+tile_set = SubResource("TileSet_asiaw")
+format = 2
+layer_0/tile_data = PackedInt32Array(65536, 458752, 3, 65537, 458752, 3, 65539, 458752, 3, 0, 458752, 3, 1, 458752, 3, -65535, 458752, 3, -131071, 458752, 3, -131072, 458752, 3, 196607, 458752, 3, 196606, 458752, 3, 131072, 458752, 3, 131073, 458752, 3, 131075, 458752, 3, 131077, 458752, 3, 5, 458752, 3, -65531, 458752, 3, -131067, 458752, 3, -131068, 458752, 3, -131069, 458752, 3, -131070, 458752, 3, -65540, 458752, 3, -65541, 458752, 3, -65542, 458752, 3, -65543, 458752, 3, -7, 458752, 3, 65529, 458752, 3, 131065, 458752, 3, 196601, 458752, 3, 262137, 458752, 3, 262138, 458752, 3, 262139, 458752, 3, 196603, 458752, 3, 65531, 458752, 3, 65532, 458752, 3, -4, 458752, 3, 196604, 458752, 3, 262140, 458752, 3, 262141, 458752, 3, 262142, 458752, 3, 262143, 458752, 3, 196608, 458752, 3, 196611, 458752, 3, 196612, 458752, 3, 196613, 458752, 3, -5, 458752, 3, -6, 458752, 3, 65530, 458752, 3, 196602, 458752, 3, -131079, 458752, 3, -131078, 458752, 3, -131077, 458752, 3, -131076, 458752, 3, -196603, 458752, 3, -262139, 458752, 3, -262140, 458752, 3, -262141, 458752, 3, -262142, 458752, 3, -262143, 458752, 3, -262144, 458752, 3, -196609, 458752, 3, -196610, 458752, 3, -196611, 458752, 3, -196612, 458752, 3, -196613, 458752, 3, -196614, 458752, 3, -196615, 458752, 3, 65538, 458752, 3, 131074, 458752, 3, 65541, 458752, 3)
+
+[node name="nelvl" parent="." instance=ExtResource("4_nxek2")]
+position = Vector2(40, 8)
+
+[node name="light" parent="." instance=ExtResource("1_22j2d")]
+position = Vector2(-104, -73)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-124, 1.75)
+shape = SubResource("RectangleShape2D_46mun")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4.5, -74)
+shape = SubResource("RectangleShape2D_ux1c6")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(106, 4)
+shape = SubResource("RectangleShape2D_h2ihg")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-6.25, 74)
+shape = SubResource("RectangleShape2D_ewc4h")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(16.5, -40.5)
+shape = SubResource("RectangleShape2D_suhdu")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-40.5, 3)
+shape = SubResource("RectangleShape2D_bt865")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-47.5, 23.5)
+shape = SubResource("RectangleShape2D_5skcn")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5, -8)
+shape = SubResource("RectangleShape2D_xyna4")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-5, -10.5)
+shape = SubResource("RectangleShape2D_n2v60")
+script = ExtResource("1_g40hv")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("6_vp2ra")]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://knbx350scr7j"]
+
+[ext_resource type="Script" path="res://puzzle/nelvl.gd" id="1_qeden"]
+[ext_resource type="Texture2D" uid="uid://ppiya4lgndpv" path="res://assets/Dots/Sem título.png" id="2_1pj27"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t73j8"]
+size = Vector2(14, 14)
+
+[node name="nelvl" type="CharacterBody2D"]
+collision_layer = 4
+script = ExtResource("1_qeden")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_1pj27")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t73j8")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Temasmat" load_steps=6 format=3 uid="uid://bu6qg6l2gf58c"]
+
+[ext_resource type="Script" path="res://match/temas/temas.gd" id="1_1baeu"]
+[ext_resource type="Resource" uid="uid://b047fk3o68txn" path="res://match/pergunta/pergunta9.tres" id="1_e7mdr"]
+[ext_resource type="Resource" uid="uid://bjan70kyjmxt7" path="res://match/pergunta/pergunta10.tres" id="2_6h123"]
+[ext_resource type="Resource" uid="uid://qc3t7ak4q1x8" path="res://match/pergunta/pergunta11.tres" id="3_5fl77"]
+[ext_resource type="Resource" uid="uid://dfbic8652bag0" path="res://match/pergunta/pergunta12.tres" id="4_0fuwt"]
+
+[resource]
+script = ExtResource("1_1baeu")
+itens = Array[Resource("res://match/pergunta/match.gd")]([ExtResource("1_e7mdr"), ExtResource("2_6h123"), ExtResource("3_5fl77"), ExtResource("4_0fuwt")])
